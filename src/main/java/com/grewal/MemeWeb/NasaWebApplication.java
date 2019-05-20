@@ -2,12 +2,14 @@ package com.grewal.MemeWeb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class MemeWebApplication {
+@ComponentScan(basePackages= {"com.grewal.controller"})
+public class NasaWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MemeWebApplication.class, args);
+		SpringApplication.run(NasaWebApplication.class, args);
 	}
 
 }
