@@ -1,0 +1,1 @@
+insert into user(name, user_name, password)values('yaya','yaya','yaya');
