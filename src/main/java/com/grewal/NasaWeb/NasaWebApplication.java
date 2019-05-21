@@ -1,4 +1,4 @@
-package com.grewal.MemeWeb;
+package com.grewal.NasaWeb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

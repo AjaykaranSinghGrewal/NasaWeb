@@ -1,4 +1,4 @@
-$('form').submit(function(event){
+$('#searchform').submit(function(event){
     event.preventDefault();
     var $searchfield = $('#inputText').val();
     var url = "https://images-api.nasa.gov/search?q=" +$searchfield+ "&media_type=image";
@@ -13,7 +13,7 @@ $('form').submit(function(event){
         	
             $.each(data.collection, function(key, value){
             	//console.log("key is " +key+ " & value is " +value);
-            	//console.log("key is " +key+ " & value is " +JSON.stringify(value));
+            	console.log("key is " +key+ " & value is " +JSON.stringify(value));
             	
                 var imageHTML = '<div class="container">';
             	if(key=='items') {

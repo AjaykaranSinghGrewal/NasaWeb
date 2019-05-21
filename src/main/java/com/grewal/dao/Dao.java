@@ -9,7 +9,7 @@ public class Dao {
 		
 	}
 	
-	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("MemeWeb");
+	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NasaWeb");
 	EntityManager em = emf.createEntityManager();
 
 	public void closeEMF() {
