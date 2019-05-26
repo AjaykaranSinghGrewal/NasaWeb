@@ -10,16 +10,25 @@
 	<input type="button" value="date" id="datebtn">
 	<p class="getDate"></p>
   
-  <div class="row" id="imageDiv">
-        <div class="col-6">
-            <img id="imageframe" class="img-responsive center-block" src="" alt=""> 
-        </div>
-    </div>
-  
-  <div class="embed-responsive embed-responsive-16by9" id="videoDiv"> 
-	  <iframe id="videoframe" class="embed-responsive-item" src=""></iframe>
+  <div id="container" class="container">
+	  <div class="row" id="imageDiv">
+	        <div class="col-4">
+	            <img id="imageframe" class="img-responsive center-block" src="" alt=""> 
+	        </div>
+	    </div>
+	  
+	  <div class="embed-responsive embed-responsive-16by9" id="videoDiv"> 
+		  <iframe id="videoframe" class="embed-responsive-item" src=""></iframe>
+	  </div>
+	  
+	  <h1 id="title" class="display-3"></h1>
+	  
+	  <blockquote class="blockquote">
+		<p class="mb-0" id="explanation"></p>
+		<footer class="blockquote-footer">Image credits: <cite id="credit" title="Image Credits"></cite></footer>
+	  </blockquote>
   </div>
-  
+	    
 </div>
 
 </body>

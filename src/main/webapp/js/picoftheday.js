@@ -15,7 +15,7 @@ $(document).ready( function() {
             url:urlPicofTheDay,
             dataType: "json",
             success:function (data) {
-                //console.log(data);
+                console.log(data);
             	if (data.media_type=="image") {
             		$("#videoDiv").css("display", "none");
             		$("#imageframe").attr("src", data.url);
@@ -24,8 +24,16 @@ $(document).ready( function() {
             		$("#imageDiv").css("display", "none");
             		$("#videoframe").attr("src", data.url);
             	}
+            	$("#title").text(data.title);
+            	$('#explanation').text(data.explanation);
+            	
+            	if("copyright" in data) {
+            		$('#credit').text(data.copyright);
+            	} else {
+            		$('#credit').text("Public Domain");
+            	}
+                
             }
         });
-    	
     });
 });

@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.grewal.entity.User;
+
 public class Dao {
 	public Dao() {
 		
@@ -22,5 +24,18 @@ public class Dao {
 		em.persist(user);
 		em.flush();
 		em.getTransaction().commit();	
+	}
+
+	public User login(String email, String password) {
+		// TODO Auto-generated method stub
+		User user = null;
+		try {
+			user = em.createNamedQuery("User.login", User.class)
+					.setParameter(1, email)
+					.setParameter(2, password).getSingleResult();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return user;
 	}
 }

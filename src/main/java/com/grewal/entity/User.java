@@ -5,10 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
+@NamedQueries(value= {@NamedQuery (name="User.login", query="SELECT u FROM com.grewal.entity.User u where u.email = ?1 and u.password = ?2")})
 @Table(name="user")
 public class User {
 	
@@ -21,17 +24,17 @@ public class User {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="user_name", unique=true)
-	private String user_name;
+	@Column(name="email", unique=true)
+	private String email;
 	
 	@Column(name="password")
 	private String password;
 
-	public User(int id, String name, String user_name, String password) {
+	public User(int id, String name, String email, String password) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.user_name = user_name;
+		this.email = email;
 		this.password = password;
 	}
 
@@ -51,12 +54,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

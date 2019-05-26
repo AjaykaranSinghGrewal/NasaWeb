@@ -2,6 +2,7 @@
 <body>
 
 <a href="picoftheday">pic of the day</a>
+<a href="login">Sign in</a>
 
 <div class="container">
 
