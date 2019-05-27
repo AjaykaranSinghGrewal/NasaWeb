@@ -3,6 +3,7 @@
 
 <a href="picoftheday">pic of the day</a>
 <a href="login">Sign in</a>
+<a href="registration">Register</a>
 
 <div class="container">
 

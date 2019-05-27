@@ -8,8 +8,7 @@
       <input type="email" class="form-control" name="email" placeholder="Email Address" required autofocus />
       <input type="password" class="form-control" name="password" placeholder="Password" required/>
       <br/>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>     
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>    
     </form>
   </div>
 </div>

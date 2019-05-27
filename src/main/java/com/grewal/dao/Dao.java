@@ -3,7 +3,6 @@ package com.grewal.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
 import com.grewal.entity.User;
 
 public class Dao {
@@ -23,7 +22,7 @@ public class Dao {
 		em.getTransaction().begin();
 		em.persist(user);
 		em.flush();
-		em.getTransaction().commit();	
+		em.getTransaction().commit();
 	}
 
 	public User login(String email, String password) {
